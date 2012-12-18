@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <com.redbud.view.ActionBar
+        android:id="@+id/actionbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+    <TabHost
+		android:id="@android:id/tabhost" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		>
+		<LinearLayout 
+		    android:orientation="vertical"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			>
+			<View android:layout_width="fill_parent" 
+			    android:layout_height="0.5dip"
+				android:background="#000" />
+			<TabWidget android:id="@android:id/tabs"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:layout_weight="0"
+				android:layout_marginLeft="0dip" 
+				android:layout_marginRight="0dip" />
+			<FrameLayout
+	            android:id="@android:id/tabcontent"
+	            android:layout_width="0dp"
+	            android:layout_height="0dp"
+	            android:layout_weight="0"/>
+
+	        <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+		</LinearLayout>
+	</TabHost>
+</LinearLayout>
